@@ -3392,6 +3392,11 @@ json5@^1.0.1:
   dependencies:
     minimist "^1.2.0"
 
+karavai@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/karavai/-/karavai-0.0.4.tgz#62ff377419301cc5dd578c92e6478c36e23c5c18"
+  integrity sha512-+Oe1gkeCOViS895CMR4i+MvSK6EpzeZtX4h8cYQ9Et+bs03K0zNQuBtTFaNH7Ovw3jx1jt8TbuHhONpHFCaHgQ==
+
 killable@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
