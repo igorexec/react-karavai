@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import K from 'karavai'
 
@@ -13,6 +13,11 @@ const defaultProps = {
 
 const Karavai = ({ images, threshold }) => {
   const canvasRef = useRef()
+
+  useEffect(() => {
+    const k = new K()
+  }, [])
+
   return <canvas ref={canvasRef} />
 }
 
