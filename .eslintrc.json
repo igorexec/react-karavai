@@ -1,0 +1,15 @@
+{
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    "comma-dangle": ["error", "never"],
+    "semi": ["error", "never"]
+  }
+}
