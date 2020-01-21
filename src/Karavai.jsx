@@ -14,9 +14,11 @@ const defaultProps = {
 const Karavai = ({ images, threshold }) => {
   const canvasRef = useRef()
 
-  useEffect(() => {
-    const k = new K()
-  }, [])
+  useEffect(async () => {
+    const k = new K(images, canvasRef.current, { threshold })
+    await k.preloadImages()
+    k.start()
+  }, [canvasRef])
 
   return <canvas ref={canvasRef} />
 }
