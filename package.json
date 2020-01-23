@@ -33,6 +33,6 @@
     "webpack-merge": "4.2.2"
   },
   "dependencies": {
-    "karavai": "0.0.5"
+    "karavai": "^0.0.20"
   }
 }
