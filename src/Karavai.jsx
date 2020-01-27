@@ -4,20 +4,26 @@ import K from 'karavai'
 
 const propTypes = {
   images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  threshold: PropTypes.number
+  threshold: PropTypes.number,
+  shouldPreload: PropTypes.bool,
+  onStart: PropTypes.func
 }
 
 const defaultProps = {
-  threshold: 30
+  threshold: 30,
+  shouldPreload: false
 }
 
-const Karavai = ({ images, threshold }) => {
+const Karavai = ({ images, threshold, shouldPreload, onStart }) => {
   const canvasRef = useRef()
 
   useEffect(async () => {
     const k = new K(images, canvasRef.current, { threshold })
-    await k.preloadImages()
+    if (shouldPreload) {
+      await k.preloadImages()
+    }
     k.start()
+    onStart()
   }, [canvasRef])
 
   return <canvas ref={canvasRef} />
